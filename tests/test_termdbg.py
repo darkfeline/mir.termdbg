@@ -13,14 +13,17 @@
 # limitations under the License.
 
 import termios
+from unittest import mock
 
 from mir import termdbg
 
 
-def test_restore_term_attrs():
-    old_attrs = termios.tcgetattr(0)
-    new_attrs = old_attrs + 1
+@mock.patch('termios.tcsetattr', autospec=True)
+@mock.patch('termios.tcgetattr', autospec=True)
+def test_restore_term_attrs(getter, setter):
+    getter.return_value = old_attrs = mock.sentinel.old
+    new_attrs = mock.sentinel.new
     with termdbg.restore_term_attrs(0):
         termios.tcsetattr(0, termios.TCSANOW, new_attrs)
-        assert termios.tcgetattr(0) == new_attrs
-    assert termios.tcgetattr(0) == old_attrs
+        assert setter.call_args[0][2] == new_attrs
+    assert setter.call_args[0][2] == old_attrs
