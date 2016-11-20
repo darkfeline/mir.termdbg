@@ -1,14 +1,14 @@
 mir.termdbg
 =============
 
-.. image:: https://circleci.com/gh/project-mir/mir.termdb.svg?style=shield
-   :target: https://circleci.com/gh/project-mir/mir.termdb
+.. image:: https://circleci.com/gh/project-mir/mir.termdbg.svg?style=shield
+   :target: https://circleci.com/gh/project-mir/mir.termdbg
    :alt: CircleCI
-.. image:: https://codecov.io/gh/project-mir/mir.termdb/branch/master/graph/badge.svg
-   :target: https://codecov.io/gh/project-mir/mir.termdb
+.. image:: https://codecov.io/gh/project-mir/mir.termdbg/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/project-mir/mir.termdbg
    :alt: Codecov
-.. image:: https://badge.fury.io/py/mir.termdb.svg
-   :target: https://badge.fury.io/py/mir.termdb
+.. image:: https://badge.fury.io/py/mir.termdbg.svg
+   :target: https://badge.fury.io/py/mir.termdbg
    :alt: PyPi Release
 
 Simple terminal key press debugger.
