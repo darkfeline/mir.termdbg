@@ -32,6 +32,7 @@ import sys
 import termios
 import tty
 
+__version__ = '1.0.0'
 STDIN = 0
 
 

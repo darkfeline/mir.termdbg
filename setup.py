@@ -16,7 +16,7 @@ from setuptools import setup
 
 setup(
     name='mir.termdbg',
-    version='0.1.0',
+    version='1.0.0',
     description='Terminal key press debugger',
     long_description='',
     keywords='',
@@ -24,7 +24,7 @@ setup(
     author='Allen Li',
     author_email='darkfeline@felesatra.moe',
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python :: 3.5',
