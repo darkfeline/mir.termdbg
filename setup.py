@@ -17,7 +17,7 @@ from setuptools import setup
 setup(
     name='mir.termdbg',
     version='0.1.0',
-    description='Terminal input mapping debugger',
+    description='Terminal key press debugger',
     long_description='',
     keywords='',
     url='https://github.com/darkfeline/mir.termdbg',

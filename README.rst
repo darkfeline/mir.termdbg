@@ -11,4 +11,15 @@ mir.termdbg
    :target: https://badge.fury.io/py/mir.termdb
    :alt: PyPi Release
 
-Simple terminal input mapping debugger.
+Simple terminal key press debugger.
+
+termdbg echoes the bytes received directly from the terminal for debugging
+exactly what bytes or escape sequences a particular terminal is sending.  The
+terminal is set to raw mode if possible.
+
+termdbg's output is intended for human consumption; the output format is not
+guaranteed and should not be parsed.
+
+To exit, send the byte value 3.  This is the ASCII encoding for ^C (End Of
+Text), or CTRL-C for most terminals.  If you are unable to exit, you can send
+SIGINT from a separate terminal.
