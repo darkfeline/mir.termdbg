@@ -56,7 +56,7 @@ def _read_char(fd):
 
 def _format_char(char):
     """Format a char for printing."""
-    return '{char:d}, o{char:o}, 0x{char:X}'.format(char=char)
+    return '{char:3d}, 0o{char:03o}, 0x{char:02X}'.format(char=char)
 
 
 class _TermAttrsContext:
