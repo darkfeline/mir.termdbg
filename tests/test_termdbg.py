@@ -20,10 +20,10 @@ from mir import termdbg
 
 @mock.patch('termios.tcsetattr', autospec=True)
 @mock.patch('termios.tcgetattr', autospec=True)
-def test_restore_term_attrs(getter, setter):
+def test_TermAttrsContext(getter, setter):
     getter.return_value = old_attrs = mock.sentinel.old
     new_attrs = mock.sentinel.new
-    with termdbg.restore_term_attrs(0):
+    with termdbg._TermAttrsContext(0):
         termios.tcsetattr(0, termios.TCSANOW, new_attrs)
         assert setter.call_args[0][2] == new_attrs
     assert setter.call_args[0][2] == old_attrs
