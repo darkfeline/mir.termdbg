@@ -23,7 +23,7 @@ from mir import termdbg
 def test_TermAttrsContext(getter, setter):
     getter.return_value = old_attrs = mock.sentinel.old
     new_attrs = mock.sentinel.new
-    with termdbg._TermAttrsContext(0):
-        termios.tcsetattr(0, termios.TCSANOW, new_attrs)
+    with termdbg._TermAttrsContext(1):
+        termios.tcsetattr(1, termios.TCSANOW, new_attrs)
         assert setter.call_args[0][2] == new_attrs
     assert setter.call_args[0][2] == old_attrs
