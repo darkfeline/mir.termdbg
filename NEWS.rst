@@ -9,7 +9,8 @@ This project uses `semantic versioning <http://semver.org/>`_.
 Changed
 ^^^^^^^
 
-- Improved output format.
+- Aligned output of decimal, octal, and hexadecimal representations.
+- Added more information to control character formatting.
 
 1.0.0 (2016-11-20)
 ------------------

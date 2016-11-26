@@ -12,18 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import termios
-from unittest import mock
+"""Simple terminal key press debugger."""
 
-from mir import termdbg
-
-
-@mock.patch('termios.tcsetattr', autospec=True)
-@mock.patch('termios.tcgetattr', autospec=True)
-def test_TermAttrsContext(getter, setter):
-    getter.return_value = old_attrs = mock.sentinel.old
-    new_attrs = mock.sentinel.new
-    with termdbg._TermAttrsContext(1):
-        termios.tcsetattr(1, termios.TCSANOW, new_attrs)
-        assert setter.call_args[0][2] == new_attrs
-    assert setter.call_args[0][2] == old_attrs
+__version__ = '1.0.1'

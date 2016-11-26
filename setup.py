@@ -24,18 +24,20 @@ setup(
     author='Allen Li',
     author_email='darkfeline@felesatra.moe',
     classifiers=[
-        'Development Status :: 5 - Production/Stable',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python :: 3.5',
     ],
 
-    py_modules=['mir.termdbg'],
-    packages=[],
+    packages=['mir.termdbg'],
+    package_data={
+        'mir.termdbg': ['*.csv'],
+    },
     install_requires=[],
     entry_points={
         'console_scripts': [
-            'termdbg = mir.termdbg:main',
+            'termdbg = mir.termdbg.__main__:main',
         ],
     },
 )
