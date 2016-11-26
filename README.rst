@@ -28,11 +28,10 @@ terminal.
 Example usage::
 
   $ termdbg
-  27, o33, 0x1B  # F1 pressed, terminal emits three bytes
-  79, o117, 0x4F
-  80, o120, 0x50
-  27, o33, 0x1B  # F2 pressed, terminal emits three bytes
-  79, o117, 0x4F
-  81, o121, 0x51
-  3, o3, 0x3  # Ctrl-C pressed, terminal emits ^C and termdbg quits
+   97, 0o141, 0x61, a                             # a pressed
+    1, 0o001, 0x01, SOH, ␁, ^A, Start of Heading  # Ctrl-A pressed
+   27, 0o033, 0x1B, ESC, ␛, ^[, Escape            # F1 pressed
+   79, 0o117, 0x4F, O
+   80, 0o120, 0x50, P
+    3, 0o003, 0x03, ETX, ␃, ^C, End of Text       # Ctrl-C pressed
   $
