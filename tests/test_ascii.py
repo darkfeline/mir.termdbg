@@ -1,5 +1,3 @@
-import pytest
-
 import mir.termdbg.ascii as asciilib
 
 ESC = 27  # ^[
