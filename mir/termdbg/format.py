@@ -31,23 +31,25 @@ def format_char(char: int):
 
 def _format_printable(char: int):
     """Format a printable char."""
-    return '{generic}, {char}'.format(
-        generic=_format_generic(char),
-        char=asciilib.format_printable(char),
-    )
-
-
-def _format_control(char: int):
-    """Format a control char."""
-    char = asciilib.CONTROL_CHARS[char]
-    return ('{generic}, {char.abbrev}, {char.unicode},'
-            ' {char.repr}, {char.name}'
-            .format(
-                generic=_format_generic(char.value),
-                char=char
-            ))
+    return f'{_format_generic(char)}, {_printable_char_string(char)}'
 
 
 def _format_generic(char: int):
     """Format generic char."""
-    return '{char:3d}, 0o{char:03o}, 0x{char:02X}'.format(char=char)
+    return f'{char:3d}, 0o{char:03o}, 0x{char:02X}'
+
+
+def _printable_char_string(char: int):
+    """Format printable char visibly."""
+    char = chr(char)
+    if char == ' ':
+        return 'SPC'
+    else:
+        return char
+
+
+def _format_control(char: int):
+    """Format a control char."""
+    charinfo = asciilib.CONTROL_CHARS[char]
+    return (f'{_format_generic(char)}, {charinfo.abbrev}, {charinfo.unicode},'
+            f' {charinfo.repr}, {charinfo.name}')

@@ -23,16 +23,3 @@ def test_not_is_printable_newline():
 
 def test_not_is_printable_escape():
     assert not asciilib.is_printable(ESC)
-
-
-def test_format_printable():
-    assert asciilib.format_printable(ord('a')) == 'a'
-
-
-def test_format_printable_space():
-    assert asciilib.format_printable(ord(' ')) == 'SPC'
-
-
-def test_format_printable_invalid():
-    with pytest.raises(ValueError):
-        assert asciilib.format_printable(ESC)

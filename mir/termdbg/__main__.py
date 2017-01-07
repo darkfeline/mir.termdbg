@@ -42,13 +42,13 @@ def main():
 
 
 def _loop_once(fd):
-    char = _read_char(fd)
+    char: int = _read_char(fd)
     print(format_char(char), end='\r\n')
     if char == 3:  # ^C
         sys.exit(0)
 
 
-def _read_char(fd):
+def _read_char(fd) -> int:
     """Read a char from the file descriptor."""
     return ord(os.read(fd, 1))
 

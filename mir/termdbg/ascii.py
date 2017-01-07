@@ -19,7 +19,6 @@ CONTROL_CHARS -- Mapping of ints to control character information
 
 Functions:
 is_printable -- Return whether character is printable
-format_printable -- Format printable character visibly
 """
 
 import collections
@@ -31,17 +30,6 @@ import pkg_resources
 CONTROL_CHARS = None
 ControlChar = collections.namedtuple(
     'ControlChar', 'value,abbrev,unicode,repr,name')
-
-
-def format_printable(char: int):
-    """Format printable char visibly."""
-    if not is_printable(char):
-        raise ValueError('%d is not printable' % (char,))
-    char = chr(char)
-    if char == ' ':
-        return 'SPC'
-    else:
-        return char
 
 
 def is_printable(char: int):
