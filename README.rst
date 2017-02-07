@@ -1,11 +1,11 @@
 mir.termdbg
 =============
 
-.. image:: https://circleci.com/gh/project-mir/mir.termdbg.svg?style=shield
-   :target: https://circleci.com/gh/project-mir/mir.termdbg
+.. image:: https://circleci.com/gh/darkfeline/mir.termdbg.svg?style=shield
+   :target: https://circleci.com/gh/darkfeline/mir.termdbg
    :alt: CircleCI
-.. image:: https://codecov.io/gh/project-mir/mir.termdbg/branch/master/graph/badge.svg
-   :target: https://codecov.io/gh/project-mir/mir.termdbg
+.. image:: https://codecov.io/gh/darkfeline/mir.termdbg/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/darkfeline/mir.termdbg
    :alt: Codecov
 .. image:: https://badge.fury.io/py/mir.termdbg.svg
    :target: https://badge.fury.io/py/mir.termdbg
