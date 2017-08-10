@@ -6,10 +6,16 @@ This project uses `semantic versioning <http://semver.org/>`_.
 2.0.0 ()
 --------
 
+Added
+^^^^^
+
+- `ccr` command
+
 Changed
 ^^^^^^^
 
 - Moved to Python 3.6
+- Removed entry point
 
 1.1.0 (2016-11-25)
 ------------------

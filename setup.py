@@ -17,7 +17,7 @@ from setuptools import setup
 setup(
     name='mir.termdbg',
     version='2.0.0',
-    description='Terminal key press debugger',
+    description='Terminal debugging tools',
     long_description='',
     keywords='',
     url='https://github.com/darkfeline/mir.termdbg',
@@ -35,9 +35,4 @@ setup(
         'mir.termdbg': ['*.csv'],
     },
     install_requires=[],
-    entry_points={
-        'console_scripts': [
-            'termdbg = mir.termdbg.__main__:main',
-        ],
-    },
 )

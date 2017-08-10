@@ -1,5 +1,5 @@
 mir.termdbg
-=============
+===========
 
 .. image:: https://circleci.com/gh/darkfeline/mir.termdbg.svg?style=shield
    :target: https://circleci.com/gh/darkfeline/mir.termdbg
@@ -10,6 +10,17 @@ mir.termdbg
 .. image:: https://badge.fury.io/py/mir.termdbg.svg
    :target: https://badge.fury.io/py/mir.termdbg
    :alt: PyPi Release
+
+Terminal debugging tools.
+
+Commands
+--------
+
+mir.termdbg includes two commands.
+
+::
+
+   $ python3.6 -m mir.termdbg
 
 Simple terminal key press debugger.
 
@@ -27,7 +38,7 @@ terminal.
 
 Example usage::
 
-  $ termdbg
+  $ python3.6 -m mir.termdbg
    97, 0o141, 0x61, a                             # a pressed
     1, 0o001, 0x01, SOH, ␁, ^A, Start of Heading  # Ctrl-A pressed
    27, 0o033, 0x1B, ESC, ␛, ^[, Escape            # F1 pressed
@@ -35,3 +46,19 @@ Example usage::
    80, 0o120, 0x50, P
     3, 0o003, 0x03, ETX, ␃, ^C, End of Text       # Ctrl-C pressed
   $
+
+::
+
+   $ python3.6 -m mir.termdbg.ccr
+
+Control code revealer.
+
+Run a program with arguments and pretend to be a terminal, teeing output
+to a file.
+
+This can be used to debug what control codes a troublesome program is
+emitting when it thinks it's talking to a terminal.
+
+Example usage::
+
+   $ python3.6 -m mir.termdbg.ccr logfile bad_program arg1 arg2
