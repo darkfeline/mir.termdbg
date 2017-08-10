@@ -16,7 +16,7 @@ from setuptools import setup
 
 setup(
     name='mir.termdbg',
-    version='1.1.1',
+    version='2.0.0',
     description='Terminal key press debugger',
     long_description='',
     keywords='',
