@@ -3,6 +3,14 @@ Release notes
 
 This project uses `semantic versioning <http://semver.org/>`_.
 
+2.1.0 ()
+--------
+
+Changed
+^^^^^^^
+
+- `ccr` no longer sets terminal to raw.
+
 2.0.0 (2017-08-09)
 ------------------
 
